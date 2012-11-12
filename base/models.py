@@ -21,7 +21,7 @@ class Seccion(Model):
 	profesor = models.CharField(max_length=2, choices=PROFESORES)
 
 	class Meta:
-		verbosa_name_plural = 'Profesores'
+		verbose_name_plural = 'Secciones'
 
 
 class Alumno(Model):
@@ -31,3 +31,5 @@ class Alumno(Model):
 	cedula = models.CharField(max_length=9, help_text='Comienze con tipo de cédula')
 	seccion = models.ForeignKey("Seccion")
 
+	def __unicode__():
+		return " %s %s " % (nombre, apellido)
