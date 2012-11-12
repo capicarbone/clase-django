@@ -32,4 +32,4 @@ class Alumno(Model):
 	seccion = models.ForeignKey("Seccion")
 
 	def __unicode__():
-		return " %s %s " % (nombre, apellido)
+		return " %s %s " % ( nombre, apellido ) 
