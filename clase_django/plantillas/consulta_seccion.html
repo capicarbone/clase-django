@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema de preparadurias</title>
+	<link rel="stylesheet" href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	
+	<div class="container">
+		<div class="row">
+			<div class="page-header">
+				<h1>Alumnos, Seccion {{seccion}}</h1>		
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Cedula</th>
+							<th>Nombre</th>
+							<th>Apellido</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for alumno in alumnos %}
+							<tr>
+								<td>{{alumno.cedula}}</td>
+								<td>{{ alumno.nombre }}</td>
+								<td>{{ alumno.apellido }}</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	
+</body>
+</html>

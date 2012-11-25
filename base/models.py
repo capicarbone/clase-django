@@ -33,7 +33,7 @@ class Alumno(Model):
 	asistencias = models.ManyToManyField("Clase", through="Asistencia")
 
 	def __unicode__(self):		
-		return " %s %s " % ( self.nombre, self.apellido )
+		return self.nombre
 
 
 class Asistencia(models.Model):
